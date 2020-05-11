@@ -21,10 +21,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'e#a#f9v4-=a^-p=ub1kfogbf(31*lcwvx9gh1^i+7!mv-c4!mt'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (os.environ.get("debug_value"))
 
 ALLOWED_HOSTS = ["cnt2k20nith.herokuapp.com"]
 
@@ -136,8 +136,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = '12691akshsharma@gmail.com'
-EMAIL_HOST_PASSWORD = 'rama4072813'
-
+EMAIL_HOST_USER = os.environ.get("user_email")
+EMAIL_HOST_PASSWORD = os.environ.get("user_pass")
 
 django_heroku.settings(locals())
