@@ -25,7 +25,7 @@ SECRET_KEY = 'e#a#f9v4-=a^-p=ub1kfogbf(31*lcwvx9gh1^i+7!mv-c4!mt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["cnt2k20nith.herokuapp.com"]
 
 
 # Application definition
@@ -119,7 +119,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
