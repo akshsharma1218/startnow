@@ -1,5 +1,6 @@
 body {
-  background: #fafafa;
+  background: rgb(252,252,252);
+  background: linear-gradient(90deg, rgba(252,252,252,1) 0%, rgba(207,206,228,1) 36%, rgba(0,212,255,1) 100%);
   color: #333333;
   margin-top: 5rem;
 }
@@ -29,7 +30,8 @@ ul {
 }
 
 .content-section {
-  background: #ffffff;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 41%, rgba(181,186,218,1) 60%, rgba(163,190,223,1) 80%); 
   padding: 10px 20px;
   border: 1px solid #dddddd;
   border-radius: 3px;
