@@ -1,6 +1,5 @@
 body {
-  background: rgb(252,252,252);
-  background: linear-gradient(90deg, rgba(252,252,252,1) 0%, rgba(207,206,228,1) 36%, rgba(0,212,255,1) 100%);
+  background-image: url("https://cdn.hipwallpaper.com/i/39/55/zM5mOG.jpg");
   color: #333333;
   margin-top: 5rem;
 }
@@ -30,12 +29,16 @@ ul {
 }
 
 .content-section {
-  background: rgb(238,174,202);
-  background: radial-gradient(circle, rgba(238,174,202,1) 41%, rgba(181,186,218,1) 60%, rgba(163,190,223,1) 80%);
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+26,0+100 */
+  background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 26%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 26%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 26%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
   padding: 10px 20px;
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 20px;
+  color:white;
 }
 
 .article-title {
