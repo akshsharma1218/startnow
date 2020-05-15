@@ -12,6 +12,9 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'Blog/base.css' %}">
 
+    <!-- icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     {% if title %}
         <title>Django Blog - {{ title }}</title>
     {% else %}
@@ -22,7 +25,10 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'Blog-home' %}">Whats New</a>
+          <form class="navbar"action="{% url 'search-result' %}" method="get">
+            <input name="q" type="text" placeholder="Search...">
+          </form>
+          <a class="navbar-brand mr-4" href="{% url 'Blog-home' %}">Start Now</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -60,7 +66,9 @@
         </div>
         <div class="col-md-4">
           <div class="content-section">
-            <h3>Will</h3>
+              <h3>
+                  will
+              </h3>
             <p class='text-muted'>You can put any information here you'd like.
               <ul class="list-group">
                 <li class="list-group-item list-group-item-light">be</li>
@@ -79,5 +87,27 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(event){
+        $(document).on('click', '#like', function(event){
+          event.preventDefault();
+          var pk = $(this).attr('value');
+          $.ajax({
+            type :'POST',
+            url :'{% url "like_post" %}',
+            data : { 'id':pk, 'csrfmiddlewaretoken': '{{ csrf_token }}' },
+            dataType :'json',
+            success : function(response){
+              $('#like-sections').html(response['form'])
+              console.log($('#like-sections').html(response['form']));
+            },
+            error : function(rs, e){
+              console.log(rs.responseText);
+            },
+          });
+        });
+      });
+    </script>
 </body>
 </html>
