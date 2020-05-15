@@ -1,7 +1,16 @@
 body {
-  background-image: url("https://cdn.hipwallpaper.com/i/39/55/zM5mOG.jpg");
+  background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #333333;
   margin-top: 5rem;
+}
+
+.content-section {
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  box-shadow: 5px 10px 15px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,19 +35,6 @@ ul {
 
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
-}
-
-.content-section {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+26,0+100 */
-  background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 26%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 26%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 26%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
-  padding: 10px 20px;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
-  margin-bottom: 20px;
-  color:white;
 }
 
 .article-title {

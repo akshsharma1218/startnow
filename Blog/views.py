@@ -13,27 +13,7 @@ from django.views.generic import (
     RedirectView
 )
 from .models import Post
-'''    user = request.user
-    post = get_object_or_404(Post,id=request.POST.get('post_id'))
-    if request.method == 'POST':
-        post_id = request.POST.get('post_id')
-        post_obj = Post.objects.get(id=post_id)
 
-        if user in post_obj.likes.all():
-            post_obj.likes.remove(user)
-        else:
-            post_obj.likes.add(user)
-
-        like, created = Like.objects.get_or_create(user=user, post_id=post_id)
-
-        if not created:
-            if like.value == 'Like':
-                like.value = 'Unlike'
-            else:
-                like.value = 'Like'
-        like.save()
-    return HttpResponseRedirect(post.get_absolute_url())
-'''
 
 class PostListView(ListView):
     model = Post
@@ -56,7 +36,7 @@ class UserPostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
-    fields = ['likes']
+
 
     def get_context_data(self,**kwargs):
         post = self.get_object()
@@ -72,9 +52,9 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'content']
 
-    def form_valpk(self, form):
+    def form_valid(self, form):
         form.instance.author = self.request.user
-        return super().form_valpk(form)
+        return super().form_valid(form)
 
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):

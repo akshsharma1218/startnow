@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,9 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     {% if title %}
-        <title>Django Blog - {{ title }}</title>
+        <title>Aksh Blog - {{ title }}</title>
     {% else %}
-        <title>Django Blog</title>
+        <title>Aksh Blog</title>
     {% endif %}
 </head>
 <body>
@@ -65,16 +64,16 @@
           {% block content %}{% endblock %}
         </div>
         <div class="col-md-4">
-          <div class="content-section">
+          <div class="bg-light content-section">
               <h3>
-                  will
+                  Hola Peeps
               </h3>
-            <p class='text-muted'>You can put any information here you'd like.
+            <p class='text-muted'>Are you ready to create and learn??
               <ul class="list-group">
-                <li class="list-group-item list-group-item-light">be</li>
-                <li class="list-group-item list-group-item-light">Updated</li>
-                <li class="list-group-item list-group-item-light">very</li>
-                <li class="list-group-item list-group-item-light">soon</li>
+                <a class="list-group-item list-group-item-light" href="{% url 'register'%}">Register</a>
+                <a class="list-group-item list-group-item-light" href="{% url 'login' %}">Login</a>
+                <a class="list-group-item list-group-item-light" href="{% url 'post-create' %}">Start Now</a>
+                <li class="list-group-item list-group-item-light">Have fun</li>
               </ul>
             </p>
           </div>
