@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'Blog/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Blog/main.css' %}">
 
     <!-- icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,10 +24,10 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <form class="navbar"action="{% url 'search-result' %}" method="get">
+          <a class="navbar-brand mr-2" href="{% url 'Blog-home' %}">Start Now</a>
+          <form class="navbar mr-auto"action="{% url 'search-result' %}" method="get">
             <input name="q" type="text" placeholder="Search...">
           </form>
-          <a class="navbar-brand mr-4" href="{% url 'Blog-home' %}">Start Now</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -39,7 +39,7 @@
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if user.is_authenticated %}
-                <a class="nav-item nav-link" href="{% url 'post-create' %}">Add Post</a>
+                <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
                 <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
                 <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
               {% else %}
@@ -66,14 +66,14 @@
         <div class="col-md-4">
           <div class="bg-light content-section">
               <h3>
-                  Hola Peeps
+                  Hola Peeps!
               </h3>
             <p class='text-muted'>Are you ready to create and learn??
               <ul class="list-group">
-                <a class="list-group-item list-group-item-light" href="{% url 'register'%}">Register</a>
-                <a class="list-group-item list-group-item-light" href="{% url 'login' %}">Login</a>
-                <a class="list-group-item list-group-item-light" href="{% url 'post-create' %}">Start Now</a>
-                <li class="list-group-item list-group-item-light">Have fun</li>
+                <li class="list-group-item list-group-item-light"><a class="list-group-item-light" href="{% url 'register'%}">Register</a></li>
+                <li class="list-group-item list-group-item-light"><a class="list-group-item-light " href="{% url 'login' %}">Login</a></li>
+                <li class="list-group-item list-group-item-light"><a class="list-group-item-light" href="{% url 'post-create' %}">Start Now</a></li>
+                <li class="list-group-item list-group-item-light"><a class="list-group-item-light" href="#">Have fun</a></li>
               </ul>
             </p>
           </div>

@@ -1,16 +1,18 @@
 body {
   background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   color: #333333;
   margin-top: 5rem;
 }
 
 .content-section {
-  border: 1px solid #dddddd;
+  border: 2px solid #dddddd;
   border-radius: 3px;
+  margin-top: 20px;
+  padding: 5px;
   margin-bottom: 20px;
-  box-shadow: 5px 10px 15px;
+  box-shadow: 10px 15px 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {

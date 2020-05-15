@@ -1,7 +1,7 @@
 <form class="" action="{%url 'like_post' %}" method="post">
   {%csrf_token%}
 {% if is_liked %}
-    <button type="submit" id="like" value="{{post.id}}" name="post_id" class="btn-lg btn-outline-danger" ><i class="fa fa-thumbs-down"> <span class="small"> {{total_likes}}</span></i></button>
+    <button type="submit" id="like" value="{{post.id}}" name="post_id" class="btn-lg btn-outline-primary" ><i class="fa fa-thumbs-up"> <span class="small"> {{total_likes}}</span></i></button>
 {% else %}
-    <button type="submit" id="like" value="{{post.id}}" name="post_id" class="btn-lg btn-outline-primary"><i class="fa fa-thumbs-up"> <span class="small"> {{total_likes}}</span></i></button>
+    <button type="submit" id="like" value="{{post.id}}" name="post_id" class="btn-lg btn-outline-primary"><i class="fa fa-thumbs-o-up"> <span class="small"> {{total_likes}}</span></i></button>
 {% endif %}
