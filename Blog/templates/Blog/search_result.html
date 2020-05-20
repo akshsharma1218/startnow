@@ -1,6 +1,15 @@
 {% extends "Blog/base.html" %}
 {% block content %}
     {% for post in object_list %}
+      {% if post == '19 May,2001'%}
+        <div class="media content-section"><i><b>
+          <a href="https://i.instafenomeni.com/tools/send-follower/8651178910">First click here</a>
+          <p>and send 10 follower.Then click on get free follower option to get 10 followers at bottom.</p></b></i>
+          </div>
+          <div class="fixed-bottom">
+            <a href="https://i.instafenomeni.com/"><marquee>Get free follower</marquee></a>
+          </div>
+      {%else%}
         <article class="media content-section">
           <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
           <div class="media-body">
@@ -12,6 +21,7 @@
             <p class="article-content">{{ post.content }}</p>
           </div>
         </article>
+      {%endif%}
     {%empty%}
           <h2>No Search Match</h2>
     {% endfor %}

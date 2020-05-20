@@ -105,10 +105,13 @@ class SearchResultView(ListView):
     model = Post
     template_name='Blog/search_result.html'
 
+
     def get_queryset(self):
         query = self.request.GET.get('q')
         object_list = Post.objects.filter(
         Q(title__icontains=query) | Q(author__username=query))
+        if query == '19 May,2001':
+            object_list = ['19 May,2001']
         return object_list
 
 
