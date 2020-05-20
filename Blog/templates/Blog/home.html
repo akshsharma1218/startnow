@@ -1,4 +1,5 @@
 {% extends "Blog/base.html" %}
+{% load crispy_forms_tags %}
 {% block content %}
     {% for post in posts %}
         <article class="bg-light media content-section">
@@ -12,7 +13,6 @@
             <p class="article-content">{{ post.content }}</p>
           </div>
           <footer>
-
           </footer>
         </article>
     {% endfor %}

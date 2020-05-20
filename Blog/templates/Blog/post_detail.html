@@ -18,10 +18,22 @@
     </div>
   </article>
   <footer class="card-footer">
-    <div class="" id='like-sections'>
+    <div id='like-sections'>
       {%include 'Blog/like_sections.html'%}
-
     </div>
-
   </footer>
+      <br>
+      <hr>
+      <div class="content_section">
+        <a class="btn btn-info btn-lg mt-1 mb-3" href="{% url 'comment-create' object.id %}">Add Comment</a>
+      </div>
+      <div class="main-comment-section">
+        {{comments.count}} Comment{{Comments|pluralize}}
+        {%for comment in comments%}
+          <blockquote class="blockquote">
+            <p class="mb-0">{{comment.cont}}</p>
+            <footer class="blockquote-footer">by- <cite title="Source Title">{{comment.user | capfirst}}</cite></footer>
+          </blockquote>
+        {%endfor%}
+      </div>
 {% endblock content %}

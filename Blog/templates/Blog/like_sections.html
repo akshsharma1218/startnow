@@ -1,4 +1,4 @@
-<form class="" action="{%url 'like_post' %}" method="post">
+<form method="post">
   {%csrf_token%}
 {% if is_liked %}
     <button type="submit" id="like" value="{{post.id}}" name="post_id" class="btn-lg btn-outline-primary" ><i class="fa fa-thumbs-up"> <span class="small"> {{total_likes}}</span></i></button>

@@ -12,6 +12,8 @@
             <p class="article-content">{{ post.content }}</p>
           </div>
         </article>
+    {%empty%}
+          <h2>No Search Match</h2>
     {% endfor %}
     {% if is_paginated %}
 
