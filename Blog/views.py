@@ -2,7 +2,6 @@ from django.shortcuts import render, get_object_or_404,redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.db.models import Q
-from django.urls import reverse,reverse_lazy
 from django.template.loader import render_to_string
 from django.http import HttpResponseRedirect, JsonResponse
 from django.views.generic import (
@@ -12,8 +11,7 @@ from django.views.generic import (
     UpdateView,
     DeleteView,
     RedirectView,
-    CreateView,
-    FormView
+    CreateView
 )
 from .models import Post, Comment
 
@@ -134,6 +132,8 @@ def like_post(request):
         html = render_to_string('Blog/like_sections.html', context, request = request)
         return JsonResponse({ 'form': html })
 
+def home(request):
+    return render(request, 'Blog/fake.html', {'title': 'Relationship_Strength'})
 
 
 def about(request):
