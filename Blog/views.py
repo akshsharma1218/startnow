@@ -132,9 +132,6 @@ def like_post(request):
         html = render_to_string('Blog/like_sections.html', context, request = request)
         return JsonResponse({ 'form': html })
 
-def home(request):
-    return render(request, 'Blog/fake.html', {'title': 'Relationship_Strength'})
-
 
 def about(request):
     return render(request, 'Blog/about.html', {'title': 'About'})

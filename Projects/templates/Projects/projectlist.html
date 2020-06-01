@@ -1,0 +1,47 @@
+{% extends  'Projects/main.html'%}
+{%block cont%}
+<article class="bg-light media content-section">
+ <div class="media-body">
+   <u><h2>MenInMiddleAttack</h2></u>
+   <p>A man-in-the-middle attack is a type of cyberattack where a malicious actor inserts him/herself into a conversation between two parties, impersonates both parties and gains access to information that the two parties were trying to send to each other. A man-in-the-middle attack allows a malicious actor to intercept, send and receive data meant for someone else, or not meant to be sent at all, without either outside party knowing until it is too late. Man-in-the-middle  attacks can be abbreviated in many ways, including MITM, MitM, MiM or MIM.</p>
+   <br>
+   <hr>
+   <img class="mx-auto d-block" src="media/profile_pics/mim.png" alt="">
+   <br>
+   <hr>
+   <p>A man-in-the-middle attacker can sit between a user and the website they want to visit, and collect their username and password. This can be done by targeting the HTTP connection between the user and the website; hijacking this connection lets an attacker act as a proxy, collecting and modifying information being sent between the user and the site. Alternately the attacker can steal a user’s cookies (small pieces of data created by a website and stored on a user’s  computer for identification and other purposes). These stolen cookies can be used to hijack a user’s session, letting an attacker impersonate that user on the site.<br>
+   Additionally, it can be used to gain a foothold inside a secured perimeter during the infiltration stage of an advanced persistent threat (APT) assault.</p>
+ </div>
+</article>
+ <div>
+  <h3>Example</h3>
+  <img class="mx-auto d-block" height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRMdmUKaI6tD1Edou-ftCtTTSnIXLe8_osu3siEs-oawaZemcw6&usqp=CAU" alt="">
+ <p>MenInMiddleAttack by - Eve</p>
+ <p class="text-muted"><small><a href="{% url 'mitm' %}">Let's Do it</a></small>
+ </div>
+ <article class="bg-light media content-section">
+   <div class="media-body">
+     <u><h3>MItM Attack</h3></u>
+      <p>MITM attack progression <br>Successful MITM execution has two distinct phases: <b>interception</b> and <b>decryption</b>.<br>
+        <h4>Interception</h4>
+        The first step intercepts user traffic through the attacker’s network before it reaches its intended destination.
+        The most common (and simplest) way of doing this is a passive attack in which an attacker makes free, malicious WiFi hotspots available to the public. Typically named in a way that corresponds to their location, they aren’t password protected. Once a victim connects to such a hotspot, the attacker gains full visibility to any online data exchange.
+        Attackers wishing to take a more active approach to interception may launch one of the following attacks:<br><br>
+        <ul>
+          <li><h5>IP spoofing</h5>It involves an attacker disguising himself as an application by altering packet headers in an IP address. As a result, users attempting to access a URL connected to the application are sent to the attacker’s website.
+          <br><br><li><h5>ARP spoofing</h5>It is the process of linking an attacker’s MAC address with the IP address of a legitimate user on a local area network using fake ARP messages. As a result, data sent by the user to the host IP address is instead transmitted to the attacker.
+          <br><br><li><h5>DNS spoofing</h5>It, also known as DNS cache poisoning, involves infiltrating a DNS server and altering a website’s address record. As a result, users attempting to access the site are sent by the altered DNS record to the attacker’s site.
+        </ul>
+        <br>
+        <h4>Decryption</h4>
+        <br>
+        After interception, any two-way SSL traffic needs to be decrypted without alerting the user or application. A number of methods exist to achieve this:
+        <ul>
+          <br><br><li><h5>HTTPS spoofing</h5>It sends a phony certificate to the victim’s browser once the initial connection request to a secure site is made. It holds a digital thumbprint associated with the compromised application, which the browser verifies according to an existing list of trusted sites. The attacker is then able to access any data entered by the victim before it’s passed to the application.
+          <br><br><li><h5>SSL BEAST</h5>It (browser exploit against SSL/TLS) targets a TLS version 1.0 vulnerability in SSL. Here, the victim’s computer is infected with malicious JavaScript that intercepts encrypted cookies sent by a web application. Then the app’s cipher block chaining (CBC) is compromised so as to decrypt its cookies and authentication tokens.
+          <br><br><li><h5>SSL hijacking</h5>It occurs when an attacker passes forged authentication keys to both the user and application during a TCP handshake. This sets up what appears to be a secure connection when, in fact, the man in the middle controls the entire session.
+          <br><br><li><h5>SSL stripping</h5>It downgrades a HTTPS connection to HTTP by intercepting the TLS authentication sent from the application to the user. The attacker sends an unencrypted version of the application’s site to the user while maintaining the secured session with the application. Meanwhile, the user’s entire session is visible to the attacker.
+        </ul>
+   </div>
+ </article>
+{%endblock%}

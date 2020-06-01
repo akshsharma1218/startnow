@@ -25,8 +25,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
-DEBUG = False
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
+#DEBUG = False
 
 ALLOWED_HOSTS = ["startnow.herokuapp.com"]
 
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'Blog.apps.BlogConfig',
     'crispy_forms',
     'users.apps.UsersConfig',
+    'Projects.apps.ProjectsConfig',
     ]
 
 MIDDLEWARE = [
@@ -124,6 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
