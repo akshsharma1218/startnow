@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'e#a#f9v4-=a^-p=ub1kfogbf(31*lcwvx9gh1^i+7!mv-c4!mt'
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = 'aemn2%c*^70v5m0ypyv7it6eq*=-+eto6*1$(w-p+9a@2!np^)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
@@ -140,7 +139,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.environ.get("user_email")
-EMAIL_HOST_PASSWORD = os.environ.get("user_pass")
-
-django_heroku.settings(locals())
+EMAIL_HOST_USER = "cnt2k20@gmail.com"
+EMAIL_HOST_PASSWORD = "rama4072813"
