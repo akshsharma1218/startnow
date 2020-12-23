@@ -11,10 +11,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import psycopg2
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+DATABASE_URL ="postgres://xxiynsfjbuspfu:452a71694236bf2218323699fb1ecb9b175259aa8c0ed3f2444e88f779cd2a75@ec2-50-17-90-177.compute-1.amazonaws.com:5432/d66opff7psgda0"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -80,13 +81,24 @@ WSGI_APPLICATION = 'mySite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd66opff7psgda0',
+        'USER' :'xxiynsfjbuspfu',
+        'PASSWORD' : '452a71694236bf2218323699fb1ecb9b175259aa8c0ed3f2444e88f779cd2a75',
+        'HOST' : 'ec2-50-17-90-177.compute-1.amazonaws.com',
+        'PORT' : '5432',
     }
 }
-
+import dj_database_url
+DATABASES['default'] = dj_database_url.config(default=DATABASE_URL)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
