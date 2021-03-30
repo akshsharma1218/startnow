@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary',
     'Blog.apps.BlogConfig',
     'crispy_forms',
     'users.apps.UsersConfig',
@@ -144,6 +145,8 @@ CLOUDINARY_STORAGE = {
     'API_KEY': '663417468428828',
     'API_SECRET': 'CMenDWeK724l5T1Kp6U5H0jTrpI',
 }
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
