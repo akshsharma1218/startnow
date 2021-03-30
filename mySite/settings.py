@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'Blog.apps.BlogConfig',
     'crispy_forms',
     'users.apps.UsersConfig',
-    'Projects.apps.ProjectsConfig',
     ]
 
 MIDDLEWARE = [
@@ -140,6 +139,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'djizvhr79',
+    'API_KEY': '663417468428828',
+    'API_SECRET': 'CMenDWeK724l5T1Kp6U5H0jTrpI',
+}
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
@@ -155,4 +159,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "cnt2k20@gmail.com"
-EMAIL_HOST_PASSWORD = "rama4072813"
+EMAIL_HOST_PASSWORD = "seiaobihmohcatru"

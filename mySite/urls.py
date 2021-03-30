@@ -46,7 +46,6 @@ urlpatterns = [
          ),
          name='password_reset_complete'),
     path('', include('Blog.urls')),
-    path('',include('Projects.urls')),
 ]
 
 if settings.DEBUG:
