@@ -24,7 +24,6 @@ class PostListView(ListView):
     paginate_by = 5
 
 
-
 class UserPostListView(ListView):
     model = Post
     template_name = 'Blog/user_posts.html'  # <app>/<model>_<viewtype>.html

@@ -1,22 +1,28 @@
 body {
-  background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  /* background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"); */
+  background: #dfebf4F;
   background-repeat: repeat;
   background-size: 100%;
   color: #333333;
   margin-top: 5rem;
+  font-family: 'Averia Gruesa Libre';
 }
 
+label, a, button{
+  font-family: 'Averia Gruesa Libre';
+}
 .content-section {
-  border: 2px solid #dddddd;
+  border: 2px solid black;
   border-radius: 7px;
   margin-top: 20px;
   padding: 15px;
   margin-bottom: 20px;
-  box-shadow: 10px 15px 20px;
+  box-shadow: 8px 12px 17px grey;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #444444;
+  font-family: 'Averia Gruesa Libre';
 }
 
 ul {
@@ -39,17 +45,19 @@ ul {
   font-weight: 500;
 }
 
-.article-title {
-  color: #444444;
+.article-title{
+  color: #063b43;
+  text-transform: capitalize;
 }
 
-a.article-title:hover {
-  color: #428bca;
+a.article-title:hover{
+  color:#1a3e43;
   text-decoration: none;
 }
 
 .article-content {
   white-space: pre-line;
+  font-size: 18px;
 }
 
 .article-img {
@@ -84,4 +92,12 @@ a.article-title:hover {
 
 .account-heading {
   font-size: 2.5rem;
+}
+
+.name{
+  color: black;
+  font-family: courier;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 18px;
 }
