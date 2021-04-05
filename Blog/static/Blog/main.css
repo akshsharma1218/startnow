@@ -1,6 +1,6 @@
 body {
   /* background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"); */
-  background: #dfebf4F;
+  background: #dce3e8;
   background-repeat: repeat;
   background-size: 100%;
   color: #333333;
@@ -18,6 +18,7 @@ label, a, button{
   padding: 15px;
   margin-bottom: 20px;
   box-shadow: 8px 12px 17px grey;
+  background: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -58,6 +59,7 @@ a.article-title:hover{
 .article-content {
   white-space: pre-line;
   font-size: 18px;
+  margin-left: 10px;
 }
 
 .article-img {
@@ -94,10 +96,26 @@ a.article-title:hover{
   font-size: 2.5rem;
 }
 
+p{
+  text-align: justify;
+}
 .name{
   color: black;
-  font-family: courier;
   text-transform: capitalize;
   font-weight: bold;
   font-size: 18px;
+}
+.rating_pc{
+  margin-left: 18vw;
+}
+.rating_mob{
+  display: none;
+}
+@media (max-width:1000px) {
+  .rating_pc{
+    display: none;
+  }
+  .rating_mob{
+    display: inline;
+  }
 }

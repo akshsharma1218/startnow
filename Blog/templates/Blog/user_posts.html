@@ -8,12 +8,11 @@
             <div class="article-metadata">
               <a class="mr-2 name" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
               <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+              <small class="rating_pc text-muted">Likes : {{post.total_likes}} &nbsp; Coments : {{post.comment_set.count}}</small>
             </div>
             <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
-          </div>
-          <div class="text-muted">
-            <p><small>Likes : {{post.total_likes}} &nbsp; Coments : {{post.comment_set.count}}</small></p>
+            <small class="rating_mob text-muted">Likes : {{post.total_likes}} &nbsp; Coments : {{post.comment_set.count}}</small>
           </div>
         </article>
     {% endfor %}
