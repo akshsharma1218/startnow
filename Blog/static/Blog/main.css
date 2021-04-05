@@ -106,12 +106,12 @@ p{
   font-size: 18px;
 }
 .rating_pc{
-  margin-left: 18vw;
+  margin-left: 43%;
 }
 .rating_mob{
   display: none;
 }
-@media (max-width:1000px) {
+@media (max-width:1300px) {
   .rating_pc{
     display: none;
   }
